@@ -1,21 +1,20 @@
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
-  let cityElement = document.querySelector("#city");
-  let descriptionElement = document.querySelector("#description");
+  let cityElement = document.querySelector(".weather-app-city");
+  let descriptionElement = document.querySelector(".weather-app-details");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector(".weather-app-icon");
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  humidityElement.innerHTML = `Humidity: <strong>${response.data.temperature.humidity}%</strong>`;
+  windSpeedElement.innerHTML = `Wind:<strong>${response.data.wind.speed}km/h</strong>`;
   temperatureElement.innerHTML = Math.round(temperature);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
 function formatDate(date) {
@@ -40,19 +39,19 @@ function formatDate(date) {
 }
 
 function searchCity(city) {
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiKey = "6sfGqDExKzUBtKNUQzycSqs7blnsbdYq";
+  let apiUrl = `https://api.tomorrow.io/v4/weather/realtime?location=${city}&apikey=${apiKey}`;
   axios.get(apiUrl).then(refreshWeather);
 }
 
 function handleSearchSubmit(event) {
   event.preventDefault();
-  let searchInput = document.querySelector("#search-form-input");
+  let searchInput = document.querySelector(".search-form-input");
 
   searchCity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#search-form");
+let searchFormElement = document.querySelector(".search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Brakpan");
