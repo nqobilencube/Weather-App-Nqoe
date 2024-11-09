@@ -1,5 +1,9 @@
 body {
   background-color: #f9f7fe;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+a {
+  color: purple;
 }
 .Mandy-Weather-app {
   background: white;
@@ -8,4 +12,67 @@ body {
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
   padding: 30px;
+}
+header {
+  border-bottom: 1px solid #f9f7fe;
+  padding: 0 0 30px 0;
+}
+.search-form-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+.search-form-button {
+  background-color: purple;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: whitesmoke;
+}
+.Mandy-Weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+.Mandy-Weather-app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.Mandy-Weather-app-details {
+  font-size: 16px;
+  line-height: 20px;
+}
+.Mandy-Weather-app-details strong {
+  color: red;
+}
+main {
+  padding: 30px 0;
+}
+.Mandy-Weather-app-temperature-containter {
+  display: flex;
+}
+.Mandy-Weather-app-temperature-value {
+  font-size: 50px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.Mandy-Weather-app-icon {
+  font-size: 44px;
+  margin-top: 22px;
+}
+.Mandy-Weather-app-unit {
+  margin-top: 18px;
+  font-size: 28px;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 15px;
 }
