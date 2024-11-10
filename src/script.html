@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="script.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="script.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Mandy-Weather-app</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="Mandy-Weather-app">
-    <header>
+      <header>
         <form class="search-form" id="search-form">
-            <Input type="search" placeholder="Enter a city..." required id="search-form-input"class="search-form-input"/>
-            <input type="submit" value="search" class="search-form-button"/>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="search" class="search-form-button" />
         </form>
-    </header>
-    <main>
+      </header>
+      <main>
         <div class="Mandy-Weather-app-data">
-        <div>
-    <h1 class="Mandy-Weather-app-city" id ="Mandy-Weather-app-city">Bulawayo</h1>
-    <p class="Mandy-Weather-app-details">
-        <span id="date">Monday</span>
-        <span id="time"> 12:00</span>
-       <span id="description">scattered clouds</span>
-       <br/>
-       Humidity:<strong id ="humidity">56%,</strong>,
-       Wind:<strong id="wind-speed"> 2.50km/h</strong>
-    </p>
-    </div>
-    <div class="Mandy-Weather-app-temperature-containter">
-    <div id="Mandy-Weather-app-icon">⛅</div>
-    <div class="Mandy-Weather-app-temperature-value" id="temperature.value">13</div> 
-    <div class="Mandy-Weather-app-unit">°C</div>
-    </div>
-    </div>
-    </main>
-    <footer>
-       This project was coded by
-        <a href="" target="-blank"> </a>Nqobile Ncube </a>
+          <div>
+            <h1 class="Mandy-Weather-app-city" id="Mandy-Weather-app-city">
+              Bulawayo
+            </h1>
+            <p class="Mandy-Weather-app-details">
+              <span id="date"></span>
+              <span id="time"> 12:00</span>
+              <span id="description">scattered clouds</span>
+              <br />
+              Humidity:<strong id="humidity">56%,</strong>, Wind:<strong
+                id="wind-speed"
+              >
+                2.50km/h</strong
+              >
+            </p>
+          </div>
+          <div class="Mandy-Weather-app-temperature-containter">
+            <div id="Mandy-Weather-app-icon">⛅</div>
+            <div
+              class="Mandy-Weather-app-temperature-value"
+              id="temperature-value"
+            >
+              13
+            </div>
+            <div class="Mandy-Weather-app-unit">°C</div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/nqobilencube/" target="_blank"
+          >Nqobile Ncube
+        </a>
         is
-        <a href="https://github.com/nqobilencube/Weather-App-Nqoe" target="_blank">open sourced on Github</a>
+        <a
+          href="https://github.com/nqobilencube/Weather-App-Nqoe"
+          target="_blank"
+          >open sourced on Github</a
+        >
         and
-        <a href="https://dapper-pika-a758c0.netlify.app/" target="_blank">hosted on Netlify</a>
-
-</footer>  
-</div>
-<script src="index.js"></script>
-</body>
+        <a href="https://dapper-pika-a758c0.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
